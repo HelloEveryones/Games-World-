@@ -1,7 +1,14 @@
-import { useEffect } from "react"
-import requester from "../../apiServices/requester"
+import { useEffect, useState } from 'react'
+import * as gamesApi from '../../apiServices/gamesApi'
 
 export default function GameList(){
+    const [ games, setGames]=useState([])
+
+useEffect(()=>{
+gamesApi.getAll()
+.then (result => setGames(result));
+},[])
+
 
     return (
         <section id="catalog-page">
