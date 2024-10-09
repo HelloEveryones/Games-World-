@@ -1,4 +1,8 @@
+import { useEffect } from "react"
+import requester from "../../apiServices/requester"
+
 export default function GameList(){
+
     return (
         <section id="catalog-page">
             <h1>All Games</h1>
