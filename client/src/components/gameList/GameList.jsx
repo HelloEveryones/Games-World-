@@ -15,11 +15,12 @@ gamesApi.getAll()
         <section id="catalog-page">
             <h1>All Games</h1>
             {/*<!-- Display div: with information about every game (if any) -->*/}
-{games.length > 0}
-? {games.map(game=><GameListItem key={game._id} {...game}/>)}
+{games.length > 0
+? games.map(game=><GameListItem key={game._id} {...game}/>)
 : <h3 className="no-articles">No added games yet</h3>
-        </section>
-    )
+     } 
+     </section>
+    );
 }
         
 
