@@ -13,7 +13,9 @@ const comments = Object.values(result);
     return comments;
 }
 
-export default {
+const commentsApi= {
     create,
     getAll,
 }
+
+export default commentsApi
